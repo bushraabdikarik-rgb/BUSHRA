@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bushra Abdikariim | Accounting Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink:#ff6fa3;
+  --soft:#fff0f7;
+  --dark:#2b2b2b;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* BODY */
+body{
+  font-family:'Poppins',sans-serif;
+  background:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a') center/cover fixed;
+  color:var(--dark);
+  scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,111,163,0.95);
+  z-index:999;
+}
+nav ul{
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  padding:18px;
+  list-style:none;
+}
+nav a{
+  color:white;
+  font-weight:600;
+  font-size:18px;
+}
+
+/* FLOATING ICONS */
+.floating-icons{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+.icon{
+  position:absolute;
+  opacity:0.08;
+  animation:float 18s linear infinite;
+}
+.icon:nth-child(1){left:10%;top:90%}
+.icon:nth-child(2){left:80%;top:85%;animation-duration:22s}
+.icon:nth-child(3){left:45%;top:95%;animation-duration:20s}
+.icon:nth-child(4){left:25%;top:88%;animation-duration:26s}
+
+@keyframes float{to{transform:translateY(-120vh)}}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(rgba(255,111,163,.8),rgba(255,111,163,.8));
+  color:white;
+  text-align:center;
+}
+.hero h1{
+  font-size:4.8rem;
+  animation:glow 3s infinite alternate;
+}
+.hero p{
+  font-size:1.9rem;
+  max-width:800px;
+  margin-top:25px;
+}
+.hero .btn{
+  margin-top:40px;
+  padding:16px 40px;
+  background:white;
+  color:var(--pink);
+  border-radius:30px;
+  font-size:1.3rem;
+  font-weight:600;
+  animation:pulse 2s infinite;
+}
+
+/* SECTIONS */
+section{
+  background:rgba(255,255,255,0.9);
+  margin:120px auto;
+  padding:100px 70px;
+  max-width:1200px;
+  border-radius:25px;
+  position:relative;
+  z-index:2;
+}
+
+h2{
+  font-family:'Playfair Display',serif;
+  font-size:3.2rem;
+  color:var(--pink);
+  text-align:center;
+  margin-bottom:35px;
+}
+
+p{
+  font-size:1.4rem;
+  line-height:1.9;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.about-grid img{
+  width:100%;
+  border-radius:20px;
+}
+
+/* SKILLS */
+.skill{margin-bottom:30px}
+.bar{
+  height:20px;
+  background:#ffd6ea;
+  border-radius:20px;
+  overflow:hidden;
+}
+.bar span{
+  display:block;
+  height:100%;
+  background:var(--pink);
+  animation:fill 2s forwards;
+}
+@keyframes fill{from{width:0}}
+
+/* JOURNEY */
+.timeline{
+  border-left:5px solid var(--pink);
+  padding-left:40px;
+}
+.event{margin-bottom:40px}
+
+/* SERVICES / PROJECTS */
+.services,.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.service,.card{
+  background:white;
+  padding:35px;
+  border-radius:22px;
+}
+.card img{width:100%;border-radius:20px}
+
+/* SOCIAL */
+.social{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:30px;
+}
+.social img{width:48px}
+
+/* FOOTER */
+footer{
+  background:var(--pink);
+  color:white;
+  text-align:center;
+  padding:35px;
+  font-size:1.1rem;
+}
+
+/* ANIMATIONS */
+.appear{opacity:0;transition:all 1.2s ease}
+.from-left{transform:translateX(-80px)}
+.from-right{transform:translateX(80px)}
+.from-bottom{transform:translateY(80px)}
+.zoom-in{transform:scale(.85)}
+.center-pop{transform:scale(.3)}
+.show{opacity:1;transform:none}
+.float-img{animation:gentleFloat 6s ease-in-out infinite}
+
+@keyframes gentleFloat{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+  100%{transform:translateY(0)}
+}
+@keyframes glow{
+  from{text-shadow:0 0 10px rgba(255,255,255,.4)}
+  to{text-shadow:0 0 25px rgba(255,255,255,.9)}
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}
+  70%{box-shadow:0 0 0 20px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating-icons">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135679.png" width="70">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" width="65">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" width="60">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="60">
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#journey">Journey</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="hero" id="home">
+<h1>Bushra Abdikariim</h1>
+<p>Final-Year Accounting Student • Financial Thinker • Future Professional</p>
+<a href="#contact" class="btn">Work With Me</a>
+</div>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="about-grid">
+<p>I am a final-year undergraduate accounting student with a strong passion for financial accuracy, transparency, and strategic decision-making.</p>
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
+</div>
+</section>
+
+<section id="skills">
+<h2>Core Accounting Skills</h2>
+<div class="skill"><p>Financial Reporting</p><div class="bar"><span style="width:90%"></span></div></div>
+<div class="skill"><p>Excel & Data Analysis</p><div class="bar"><span style="width:95%"></span></div></div>
+<div class="skill"><p>Auditing & Compliance</p><div class="bar"><span style="width:85%"></span></div></div>
+<div class="skill"><p>Taxation & Payroll Accounting</p><div class="bar"><span style="width:80%"></span></div></div>
+<div class="skill"><p>Financial Ethics</p><div class="bar"><span style="width:90%"></span></div></div>
+<img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818" style="width:100%;margin-top:40px;border-radius:20px">
+</section>
+
+<section id="journey">
+<h2>Academic Journey</h2>
+<div class="timeline">
+<div class="event"><h3>Foundation Years</h3><p>Accounting, economics, business math.</p></div>
+<div class="event"><h3>Advanced Studies</h3><p>Auditing, taxation, financial management.</p></div>
+<div class="event"><h3>Final Year</h3><p>Internships and professional readiness.</p></div>
+</div>
+<img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b" style="width:100%;margin-top:40px;border-radius:20px">
+</section>
+
+<section id="achievements">
+<h2>Achievements</h2>
+<div class="projects">
+<div class="card">
+<img src="Get 8 Academic Sigils and 8 Radionic Cards_ All in one package_.jpeg">
+<h3>Academic Excellence</h3>
+<p>Strong performance throughout the accounting program.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+<h3>Professional Training</h3>
+<p>Accounting workshops and finance training.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521791055366-0d553872125f">
+<h3>Case Studies</h3>
+<p>Completed real-world accounting projects.</p>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2>What I Offer</h2>
+<div class="services">
+<div class="service"><h3>Bookkeeping</h3><p>Accurate transaction records.</p></div>
+<div class="service"><h3>Financial Statements</h3><p>Clear reports.</p></div>
+<div class="service"><h3>Budget Planning</h3><p>Smart resource allocation.</p></div>
+</div>
+<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c" style="width:100%;margin-top:40px;border-radius:20px">
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">
+<img src="download45.jpeg">
+<h3>Financial Case Study</h3>
+<p>Performance analysis and forecasting.</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<p style="text-align:center">Email: bushra@example.com</p>
+<div class="social">
+<img src="https://cdn.jsdimelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/sple-icons/icons/instagram.svg">
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg">
+</div>
+<img src="Créer son contenu Instagram avec ChatGPT.jpeg" style="width:100%;margin-top:40px;border-radius:20px">
+</section>
+
+<footer>© 2025 Bushra Abdikariim | Accounting Portfolio</footer>
+
+<script>
+const elements=document.querySelectorAll('section,.card,.service,.skill,.event,img');
+elements.forEach(el=>{
+  el.classList.add('appear');
+  const e=['from-left','from-right','from-bottom','zoom-in','center-pop'];
+  el.classList.add(e[Math.floor(Math.random()*e.length)]);
+});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    en.isIntersecting?en.target.classList.add('show'):en.target.classList.remove('show');
+  });
+},{threshold:0.2});
+elements.forEach(el=>obs.observe(el));
+document.querySelectorAll('img').forEach(i=>i.classList.add('float-img'));
+</script>
+
+</body>
+</html>
+
